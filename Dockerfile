@@ -102,9 +102,3 @@ RUN jupyter serverextension enable --py jupyterlab_git
 RUN jupyter serverextension enable --py jupyterlab_templates
 RUN jupyter serverextension enable --py jupyterlab_code_formatter
 RUN jupyter serverextension enable --py nbdime --sys-prefix
-
-RUN set -ex && mkdir /workspace
-
-WORKDIR /workspace
-
-ENV PYTHONPATH "/workspace"
