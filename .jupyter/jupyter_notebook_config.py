@@ -45,7 +45,7 @@
 #  Use '*' to allow any origin to access your server.
 #  
 #  Takes precedence over allow_origin_pat.
-c.NotebookApp.allow_origin = 'https://colab.research.google.com'
+#c.NotebookApp.allow_origin = 'https://colab.research.google.com'
 
 ## Use a regular expression for the Access-Control-Allow-Origin header
 #  
@@ -763,6 +763,6 @@ c.NotebookApp.port = 8888
 #  
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
-c.JupyterLabTemplates.template_dirs = ['template']
+c.JupyterLabTemplates.template_dirs = ['templates']
 c.JupyterLabTemplates.include_default = True
 c.LatexConfig.latex_command = 'pdflatex'
