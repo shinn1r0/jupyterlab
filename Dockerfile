@@ -46,7 +46,7 @@ RUN conda config --add channels conda-forge && \
   pytorch-cpu torchvision-cpu && \
   conda update --all -y && \
   conda clean --all && \
-  pip install -U pip kaggle tb-nightly \
+  pip install -U pip kaggle tensorboard \
   jupyterlab_code_formatter jupyterlab-git jupyterlab_templates jupyterlab_latex jupyter-tensorboard && \
   rm -rf ${HOME}/.cache/pip
 
