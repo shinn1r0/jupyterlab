@@ -34,9 +34,9 @@ RUN apt-get update && apt-get upgrade -y && \
   apt-get purge -y curl unzip && \
   apt-get autoremove -y && apt-get autoclean -y
 
-RUN conda config --append channels conda-forge && \
+RUN conda config --add channels conda-forge && \
   conda config --add channels pytorch && \
-  conda install -y python=${python_version} \
+  conda config --set channel_priority strict && \
   numpy scipy numba pandas dask matplotlib numexpr \
   scikit-learn scikit-image bokeh pillow accimage pyspark xlrd sympy \
   ipython ipyparallel ipywidgets ipympl \
