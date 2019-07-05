@@ -37,6 +37,7 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN conda config --add channels conda-forge && \
   conda config --add channels pytorch && \
   conda config --set channel_priority strict && \
+  conda install -y python=${python_version} \
   numpy scipy numba pandas dask matplotlib numexpr \
   scikit-learn scikit-image bokeh pillow accimage pyspark xlrd sympy \
   ipython ipyparallel ipywidgets ipympl \
