@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 LABEL maintainer="shinn1r0 <github@shinichironaito.com>"
 
-ARG python_version="3.7.4"
+ARG python_version="3.7.3"
 ARG nodejs_version="12"
 ARG cica_version="v5.0.1"
 
@@ -26,7 +26,7 @@ RUN apt-get update && apt-get upgrade -y && \
   unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/opentype/noto && \
   rm NotoSansCJKjp-hinted.zip && \
   mkdir -p /usr/share/fonts/opentype/cica && \
-  curl -LO https://github.com/miiton/Cica/releases/download/${cica_version}/Cica_${cica_version}.zip && \
+  curl -LO https://github.com/miiton/Cica/releases/download/${cica_version}/Cica_${cica_version}_with_emoji.zip && \
   unzip Cica_${cica_version}.zip -d /usr/share/fonts/opentype/cica && \
   rm Cica_${cica_version}.zip && \
   fc-cache -f && \
